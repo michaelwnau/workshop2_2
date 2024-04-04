@@ -1,0 +1,15 @@
+version: 2
+updates:
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+ allow:
+      - dependency-name: "django"
+      - dependency-name: "gunicorn"
+      - dependency-name: "djangorestframework"
+      - dependency-name: "python-decouple"
+      - dependency-name: "psycopg2-binary"
+    commit-message:
+      prefix: "chore"
+      include: "scope"
